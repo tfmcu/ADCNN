@@ -5,7 +5,7 @@
 ## [简介](https://github.com/tfzoo/InceptionV3/wiki) 
 
 ### 网络结构
-
+```
    name        		| new name
   =======================================
   conv0             | Conv2d_1a_3x3
@@ -26,6 +26,8 @@
   mixed_8x8x1280a   | Mixed_7a
   mixed_8x8x2048a   | Mixed_7b
   mixed_8x8x2048b   | Mixed_7c
+  
+```
 
 #### 第1卷积层
 
@@ -70,6 +72,23 @@ end_points[end_point] = net
 if end_point == final_endpoint: return net, end_points
 
 ```
+
+#### MaxPool
+
+将卷积参数进行减少，单纯的进行特征图的压缩不改变深度，可以使用步长和宽度计算公式，获得输出层的高度和宽度。
+
+
+#### dropout层
+
+随机除去一些神经元，使整个模型不至于过拟合，参数设定keep_prob = 0.8(保留80%的神经元)。
+
+#### FullConnect层
+
+全连接层，在整个过程的最后，才使用全连接，训练出权重。
+
+#### softmax层
+
+神经网络最后是softmax层，softmax层是分类专用的层，使用概率来表示待分类对象有多大概率属于某个类。
 
 
 ---
