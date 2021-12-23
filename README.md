@@ -9,8 +9,10 @@
 
 ### TODO
 
-* 基于STM32G474构建多通道的ADC数据获取CNN直接处理
-* 特征识别，软中断机制
+* 基于MCU ADC DMA数据获取
+* 前置CNN数据获取和传输
+* CNN模型的下载和运行框架
+* 特征提取和中断机制
 
 ### CNN
 
@@ -31,7 +33,9 @@
 * 融合层：对独立进行特征学习的分支进行融合
 
 
-### ADC
+### MCU
 
 
-[STM32G474](https://docs.soc.xin/STM32G474) offer five fast 12-bit ADCs (5 Msps), seven comparators, six operational amplifiers
+* [STM32G474](https://docs.soc.xin/STM32G474) 5x 12bit ADC (5 Msps)
+
+* [STM32H730](https://docs.soc.xin/STM32H730) 2x 16bit ADC (3.6 Msps) + 12bit ADC (5 Msps)
