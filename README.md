@@ -39,3 +39,5 @@
 * [STM32G474](https://docs.soc.xin/STM32G474) 5x 12bit ADC (5 Msps)
 
 * [STM32H730](https://docs.soc.xin/STM32H730) 2x 16bit ADC (3.6 Msps) + 12bit ADC (5 Msps)
+
+更多 [ADC](https://docs.soc.xin/for/adc) 相关器件
