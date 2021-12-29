@@ -41,3 +41,17 @@
 * [STM32H730](https://docs.soc.xin/STM32H730) 2x 16bit ADC (3.6 Msps) + 12bit ADC (5 Msps)
 
 更多 [ADC](https://docs.soc.xin/for/adc) 相关器件
+
+#### CMSIS-NN
+
+CMSIS (Cortex Microcontroller Software Interface Standard) 基于Arm Cortex处理器的微控制器的独立于供应商的硬件抽象层
+
+CMSIS-NN用于在Cortex M上进行神经网络学习，CMSIS-RTOSv1用于实时操作系统的通用API以及基于RTX的参考实现，CMSIS-Core（M）用于Cortex-M处理器内核和外围设备的标准化API。
+
+
+CMSIS-NN库包含两个部分： NNFunction和NNSupportFunctions。
+
+NNFunction包含实现通常神经网络层类型的函数，比如卷积（convolution），深度可分离卷积（depthwise separable convolution），全连接（即内积inner-product）， 池化（pooling）和激活（activation）这些函数被应用程序代码用来实现神经网络推理应用。 内核API也保持简单，因此可以轻松地重定向到任何机器学习框架。NNSupport函数包括不同的实用函数，如NNFunctions中使用的数据转换和激活功能表。 这些实用函数也可以被应用代码用来构造更复杂的NN模块，例如， 长期短时记忆（LSTM）或门控循环单元（GRU）。
+
+
+https://github.com/ARM-software/CMSIS_5/tree/develop/CMSIS/NN
